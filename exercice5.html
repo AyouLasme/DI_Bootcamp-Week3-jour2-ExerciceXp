@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <style>
+            .boutton {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        <button class="boutton">Appuyer</button>
+        
+        <script>
+            // obtenir l'element boutton
+            const boutton = document.querySelector('.boutton');
+        
+            // ajoutter click event listener pour mettre le texte en gras
+            boutton.addEventListener('click', () => {
+              boutton.style.fontWeight = "bold";
+            });
+        
+            // ajouter un mouseover event listener pour changer la couleur du texte
+            boutton.addEventListener('mouseover', () => {
+              boutton.style.color = "yellow"
+            });
+
+            // Ajouter un mouseout event listener pour changer la couleur de fond
+            boutton.addEventListener('mouseout', () => {
+              boutton.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            });
+        
+            // Ajouter un dblclick event listener pour changer la police
+            boutton.addEventListener('dblclick', () => {
+              boutton.style.fontFamily = "Arial"
+            });
+        </script>
+
+    </body>
+</html>
